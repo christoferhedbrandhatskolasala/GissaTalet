@@ -19,7 +19,7 @@
             // variabel för talet som man ska gissa
             int randNumber;
 
-            // variabel för antalet gånger man får gissa
+            // variabel för antalet gjorda gissningar
             int numberOfGuesses;
 
             Console.WriteLine("Detta är ett spel där du ska gissa ett tal.");
