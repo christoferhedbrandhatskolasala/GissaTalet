@@ -8,13 +8,13 @@
             Random rand = new Random();
 
             // variabel för max antal gissningar
-            int maxNumberOfGuesses;
+            int maxNumberOfGuesses = 3;
 
             // variabel som innehåller den senaste gissningen. måste ha ett startvärde.
             int guess = 0;
 
             // variabel för det högsta talet man kan gissa
-            int highestGuess;
+            int highestGuess = 20;
 
             // variabel för talet som man ska gissa
             int randNumber;
@@ -28,14 +28,6 @@
             while (true) {
                 // nollställ antal gissningar
                 numberOfGuesses = 0;
-
-                // fråga och läs in antal gissningar man får
-                Console.Write("Hur många gissningar får man? ");
-                maxNumberOfGuesses = int.Parse(Console.ReadLine());
-
-                // fråga och läs in högsta talet
-                Console.Write("Hur många tal ska man gissa på? ");
-                highestGuess = int.Parse(Console.ReadLine());
 
                 // slumpa fram talet man ska gissa på
                 randNumber = rand.Next(1, highestGuess + 1);
@@ -53,18 +45,16 @@
                     // svara på gissningen
                     if (guess == randNumber)
                     {
-                        Console.Write("Du gissade rätt! Bra jobbat! ");
+                        Console.WriteLine("Du gissade rätt! Bra jobbat! ");
                     }
                     else if (guess < randNumber) {
-                        Console.Write("Du gissade för lågt! ");
+                        Console.WriteLine("Du gissade för lågt! ");
                     }
                     else if (guess > randNumber)
                     {
-                        Console.Write("Du gissade för högt! ");
+                        Console.WriteLine("Du gissade för högt! ");
                     }
 
-                    // skriv även ut hur många gissningar det är kvar
-                    Console.WriteLine((maxNumberOfGuesses - numberOfGuesses) + " gissning(ar) kvar!");
                 }
 
                 // spelet slut om slut på gissningar
