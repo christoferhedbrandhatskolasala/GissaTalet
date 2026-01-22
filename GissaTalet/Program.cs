@@ -4,9 +4,6 @@
     {
         static void Main(string[] args)
         {
-            // objekt som används till slumpgenerering
-            Random rand = new Random();
-
             // variabel för max antal gissningar
             int maxNumberOfGuesses = 3;
 
@@ -30,7 +27,7 @@
                 numberOfGuesses = 0;
 
                 // slumpa fram talet man ska gissa på
-                randNumber = rand.Next(1, highestGuess + 1);
+                randNumber = Random.Shared.Next(1, highestGuess + 1);
 
                 // starta spelet och loopa tills man gissar rätt eller har slut på gissningar
                 while (guess != randNumber && numberOfGuesses < maxNumberOfGuesses) {
